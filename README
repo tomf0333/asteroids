@@ -1,0 +1,59 @@
+tomf0333
+315962597
+tom feldboy
+
+Description :
+	made the game asteroids from Classes in a passive programming way.
+	the classes that are used:
+	
+	Ship - 
+		stores the attributes (location, speed, radius) of the ship that the
+		player controls in the game.
+	
+	Asteroid - 
+		stores the attributes (location, speed, radius, size) of the asteroids
+		which move around the screen and need to be destroyed.
+		also has a function to see if anything is close to it (for torpedo
+		hits or colisions with the main ship)
+	
+	Torpedo - 
+		stores the attributes (location, speed, radius, life) of the torpedoes
+		that the main ship fires to destroy the asteroids.
+
+worked with : the screen.py file
+
+used websites : none
+
+specail comments: 
+	the special shot description:
+		my special shot is a split shot, it makes a normal torpedo with a flag
+		that marks it as special and then splits all the special torpedoes
+		each into two others in slightly different directions (including the
+		first torpedo)
+		basicaly if you're moving fast enough or there are enough asteroids
+		then it tears them all up.
+
+	the 3 different routs i could have taken:
+		the bonus - i thought about making the bonus shot in a different class
+			but that just seemed to cause problems and in the end i didnt have
+			enough time to make it work so i dropped it and made the special
+			in the main class.
+			
+			i still think it should be in a different class that inherits all
+			the atributes from the torpedo class, even though we werent taught
+			that way of OOP yet.
+		
+		the gets of the objects - at first i thought of making each different
+			class have different gets and sets because i thought it would be
+			more unique and easier for code reading.
+			
+			in the end i realized that if i made every object have the same
+			gets and sets (in their own atrributes) then i could call each ones
+			gets and sets before establishing their class.
+			in this way i made all the move of the objects in a static function
+			outside of the main class which was a lot more easy.
+			
+		random function - i made a function that returns a random location
+			it was supposed to work for every object which i think is an easier
+			way of working, but again i had problems with it and because of
+			time constraints had to turn it into two functions instead.
